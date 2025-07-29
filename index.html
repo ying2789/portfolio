@@ -26,4 +26,16 @@
     <!-- Right: Navigation -->
     <div class="sidebar">
       <button onclick="showSection('about')">About Me</button>
-      <button oncli
+      <button onclick="showSection('projects')">Projects</button>
+      <button onclick="showSection('cv')">My CV</button>
+    </div>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
