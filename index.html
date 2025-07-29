@@ -7,7 +7,14 @@
 </head>
 <body>
   <div class="container">
-    <!-- Left: Content -->
+    <!-- Left: Navigation -->
+    <div class="sidebar">
+      <button onclick="showSection('about')">About Me</button>
+      <button onclick="showSection('projects')">Projects</button>
+      <button onclick="showSection('cv')">My CV</button>
+    </div>
+
+    <!-- Right: Content -->
     <div class="content">
       <div id="about" class="section active">
         <h2>About Me</h2>
@@ -23,12 +30,7 @@
       </div>
     </div>
 
-    <!-- Right: Navigation -->
-    <div class="sidebar">
-      <button onclick="showSection('about')">About Me</button>
-      <button onclick="showSection('projects')">Projects</button>
-      <button onclick="showSection('cv')">My CV</button>
-    </div>
+    
   </div>
 
   <script>
