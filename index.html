@@ -133,11 +133,22 @@
               <li>Debugged and refined collision and input validation to ensure smooth gameplay.</li>
             </ul>
           
-            <!-- Screenshots Grid -->
-            <div class="grid grid-cols-3 gap-2 mt-4">
-              <img src="images/escape1.png" alt="Escape the Room Screenshot 1" class="rounded-lg object-cover h-28 w-full">
-              <img src="images/escape2.png" alt="Escape the Room Screenshot 2" class="rounded-lg object-cover h-28 w-full">
-              <img src="images/escape3.png" alt="Escape the Room Screenshot 3" class="rounded-lg object-cover h-28 w-full">
+            <!-- Image Carousel -->
+            <div class="relative mt-4">
+              <img id="escapeImg" 
+                   src="images/escape1.png" 
+                   alt="Screenshot" 
+                   class="rounded-lg object-cover w-full h-64 transition duration-300"
+                   data-images='["images/escape1.png","images/escape2.png","images/escape3.png"]'
+                   data-index="0">
+          
+              <!-- Left Button -->
+              <button onclick="prevImage('escapeImg')" 
+                      class="absolute top-1/2 left-2 -translate-y-1/2 bg-slate-700 p-2 rounded-full hover:bg-slate-600">‹</button>
+          
+              <!-- Right Button -->
+              <button onclick="nextImage('escapeImg')" 
+                      class="absolute top-1/2 right-2 -translate-y-1/2 bg-slate-700 p-2 rounded-full hover:bg-slate-600">›</button>
             </div>
           </div>
         
@@ -162,11 +173,22 @@
               <li>Deployed on <span class="text-teal-400">GitHub Pages</span> for public access.</li>
             </ul>
           
-            <!-- Screenshots Grid -->
-            <div class="grid grid-cols-3 gap-2 mt-4">
-              <img src="images/beach1.png" alt="Coastal Exploration Screenshot 1" class="rounded-lg object-cover h-28 w-full">
-              <img src="images/beach2.png" alt="Coastal Exploration Screenshot 2" class="rounded-lg object-cover h-28 w-full">
-              <img src="images/beach3.png" alt="Coastal Exploration Screenshot 3" class="rounded-lg object-cover h-28 w-full">
+            <!-- Image Carousel -->
+            <div class="relative mt-4">
+              <img id="beachImg" 
+                   src="images/beach1.png" 
+                   alt="Screenshot" 
+                   class="rounded-lg object-cover w-full h-64 transition duration-300"
+                   data-images='["images/beach1.png","images/beach2.png","images/beach3.png"]'
+                   data-index="0">
+          
+              <!-- Left Button -->
+              <button onclick="prevImage('beachImg')" 
+                      class="absolute top-1/2 left-2 -translate-y-1/2 bg-slate-700 p-2 rounded-full hover:bg-slate-600">‹</button>
+          
+              <!-- Right Button -->
+              <button onclick="nextImage('beachImg')" 
+                      class="absolute top-1/2 right-2 -translate-y-1/2 bg-slate-700 p-2 rounded-full hover:bg-slate-600">›</button>
             </div>
           
             <!-- Link -->
