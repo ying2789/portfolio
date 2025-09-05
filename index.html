@@ -202,34 +202,45 @@
                class="inline-block mt-3 text-teal-400 hover:underline">Play on GitHub Pages →</a>
           </div>
 
-          <div class="bg-slate-800 rounded-xl p-5 shadow hover:shadow-lg transition">
-            <h3 class="text-xl font-semibold text-teal-300">The Seven Trials</h3>
-            <p class="mt-2">Unity | C#</p>
+          <!-- The Seven Trials Project Card (跨两列) -->
+          <div class="bg-slate-800 rounded-xl p-5 shadow hover:shadow-lg transition md:col-span-2">
+            <h3 class="text-2xl font-semibold text-teal-300">The Seven Trials</h3>
+            <p class="mt-2">Unity | C# | itch.io</p>
+          
+            <!-- 项目介绍 -->
             <ul class="list-disc list-inside text-sm mt-3 space-y-1">
-              <li>Designed and developed a <span class="text-teal-400">3D coastal exploration game</span> set on a tropical island with interactive NPCs and collectibles.</li>
-              <li>Implemented gamification elements:
-                <ul class="list-disc list-inside ml-5 space-y-1">
-                  <li><span class="text-teal-400">Exploration</span>: players discover items and NPCs across the island.</li>
-                  <li><span class="text-teal-400">Scoring system</span>: coins earned by collecting seashells/treasures and selling them to a pirate.</li>
-                  <li><span class="text-teal-400">Quests & Rewards</span>: complete tasks for extra coins, which unlock hidden objects (pirate ship, beach chairs, etc.).</li>
-                </ul>
-              </li>
-              <li>Integrated 3D assets using <span class="text-teal-400">BABYLON.SceneLoader.ImportMeshAsync</span> and customized positioning, scaling, and animations.</li>
-              <li>Created environment effects: <span class="text-teal-400">skybox, ocean shader (WaterMaterial), lighting</span>, and smooth WASD + camera movement.</li>
-              <li>Built interaction systems for collecting items, NPC dialog, and unlockable features; quest system tracked progress and rewarded players dynamically.</li>
-              <li>Deployed on <span class="text-teal-400">GitHub Pages</span> for public access.</li>
+              <li>Developed a <span class="text-teal-400">3D action-adventure game</span> combining narrative, quests, and combat mechanics.</li>
+              <li>Contributed to <span class="text-teal-400">level design</span>, <span class="text-teal-400">combat system</span>, <span class="text-teal-400">enemy AI</span>, and <span class="text-teal-400">boss battles</span>.</li>
+              <li>Implemented <span class="text-teal-400">quest progression, scoring, and achievement systems</span> to enhance player engagement.</li>
+              <li>Published the game on <span class="text-teal-400">itch.io</span> with a fully playable demo.</li>
             </ul>
           
-            <!-- Screenshots Grid -->
-            <div class="grid grid-cols-3 gap-2 mt-4">
-              <img src="images/beach1.png" alt="Coastal Exploration Screenshot 1" class="rounded-lg object-cover h-28 w-full">
-              <img src="images/beach2.png" alt="Coastal Exploration Screenshot 2" class="rounded-lg object-cover h-28 w-full">
-              <img src="images/beach3.png" alt="Coastal Exploration Screenshot 3" class="rounded-lg object-cover h-28 w-full">
+            <!-- Image Carousel -->
+            <div class="relative mt-4">
+              <img id="sevenTrialsImg" 
+                   src="images/seven1.png" 
+                   alt="The Seven Trials Screenshot" 
+                   class="rounded-lg object-cover w-full h-96 transition duration-300"
+                   data-images='["images/seven1.png","images/seven2.png","images/seven3.png"]'
+                   data-index="0">
+          
+              <!-- Left Button -->
+              <button onclick="prevImage('sevenTrialsImg')" 
+                      class="absolute top-1/2 left-3 -translate-y-1/2 bg-slate-700 p-2 rounded-full hover:bg-slate-600">‹</button>
+          
+              <!-- Right Button -->
+              <button onclick="nextImage('sevenTrialsImg')" 
+                      class="absolute top-1/2 right-3 -translate-y-1/2 bg-slate-700 p-2 rounded-full hover:bg-slate-600">›</button>
             </div>
           
-            <!-- Link -->
-            <a href="https://ying2789.github.io/task6-babylon.js/" target="_blank" class="inline-block mt-3 text-teal-400 hover:underline">Play demo on itch.io →</a>
+            <!-- Links -->
+            <div class="mt-3 space-x-4">
+              <a href="https://ying2789.itch.io/the-seven-trials" target="_blank" class="text-teal-400 hover:underline">Play on itch.io →</a>
+              <a href="https://playcanv.as/p/TQeZpI5S/" target="_blank" class="text-teal-400 hover:underline">PlayCanvas Demo →</a>
+              <a href="https://ying2789.github.io/task6-babylon.js/" target="_blank" class="text-teal-400 hover:underline">GitHub Pages Demo →</a>
+            </div>
           </div>
+
         </div>
       </section>
 
