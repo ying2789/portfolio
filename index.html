@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+h<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -53,11 +53,22 @@
               <li>Implemented <span class="text-teal-400">client-side scripts</span> for GUI updates, role display, countdown timer, and interaction prompts.</li>
               <li>Conducted testing and debugging to ensure smooth gameplay and balanced mechanics.</li>
             </ul>
-            <!-- Screenshots Grid -->
-            <div class="grid grid-cols-3 gap-2 mt-4">
-              <img src="images/hide1.png" alt="Hide and Seek Screenshot 1" class="rounded-lg object-cover h-28 w-full">
-              <img src="images/hide2.png" alt="Hide and Seek Screenshot 2" class="rounded-lg object-cover h-28 w-full">
-              <img src="images/hide3.png" alt="Hide and Seek Screenshot 3" class="rounded-lg object-cover h-28 w-full">
+            <!-- Image Carousel -->
+            <div class="relative mt-4">
+              <img id="hideAndSeekImg" 
+                   src="images/hide1.png" 
+                   alt="Hide and Seek Screenshot" 
+                   class="rounded-lg object-cover w-full h-64 transition duration-300"
+                   data-images='["images/hide1.png","images/hide2.png","images/hide3.png"]'
+                   data-index="0">
+          
+              <!-- Left Button -->
+              <button onclick="prevImage('hideAndSeekImg')" 
+                      class="absolute top-1/2 left-2 -translate-y-1/2 bg-slate-700 p-2 rounded-full hover:bg-slate-600">‹</button>
+          
+              <!-- Right Button -->
+              <button onclick="nextImage('hideAndSeekImg')" 
+                      class="absolute top-1/2 right-2 -translate-y-1/2 bg-slate-700 p-2 rounded-full hover:bg-slate-600">›</button>
             </div>
           
             <a href="https://www.roblox.com/share?code=7c25098fb5910e47a2d1ca6d4c1ef96b&type=ExperienceDetails&stamp=1742915635143" 
@@ -142,9 +153,9 @@
           
             <!-- Screenshots Grid -->
             <div class="grid grid-cols-3 gap-2 mt-4">
-              <img src="images/coastal1.png" alt="Coastal Exploration Screenshot 1" class="rounded-lg object-cover h-28 w-full">
-              <img src="images/coastal2.png" alt="Coastal Exploration Screenshot 2" class="rounded-lg object-cover h-28 w-full">
-              <img src="images/coastal3.png" alt="Coastal Exploration Screenshot 3" class="rounded-lg object-cover h-28 w-full">
+              <img src="images/beach1.png" alt="Coastal Exploration Screenshot 1" class="rounded-lg object-cover h-28 w-full">
+              <img src="images/beach2.png" alt="Coastal Exploration Screenshot 2" class="rounded-lg object-cover h-28 w-full">
+              <img src="images/beach3.png" alt="Coastal Exploration Screenshot 3" class="rounded-lg object-cover h-28 w-full">
             </div>
           
             <!-- Link -->
@@ -205,6 +216,25 @@
       const y = e.clientY;
       spotlight.style.background = `radial-gradient(600px at ${x}px ${y}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
     });
+
+    function nextImage(imgId) {
+      const img = document.getElementById(imgId);
+      const images = JSON.parse(img.getAttribute("data-images"));
+      let index = parseInt(img.getAttribute("data-index"));
+      index = (index + 1) % images.length;
+      img.src = images[index];
+      img.setAttribute("data-index", index);
+    }
+  
+    function prevImage(imgId) {
+      const img = document.getElementById(imgId);
+      const images = JSON.parse(img.getAttribute("data-images"));
+      let index = parseInt(img.getAttribute("data-index"));
+      index = (index - 1 + images.length) % images.length;
+      img.src = images[index];
+      img.setAttribute("data-index", index);
+    }
+
   </script>
 
 </body>
