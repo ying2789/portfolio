@@ -89,11 +89,22 @@ h<!DOCTYPE html>
               <li>Implemented core mechanics: <span class="text-teal-400">WASD movement</span>, <span class="text-teal-400">nectar collection</span> (press E), and a <span class="text-teal-400">scoring system</span> based on nectar collected and time taken.</li>
             </ul>
           
-            <!-- Screenshots Grid -->
-            <div class="grid grid-cols-3 gap-2 mt-4">
-              <img src="images/bee1.png" alt="Bee Maze Screenshot 1" class="rounded-lg object-cover h-28 w-full">
-              <img src="images/bee2.png" alt="Bee Maze Screenshot 2" class="rounded-lg object-cover h-28 w-full">
-              <img src="images/bee3.png" alt="Bee Maze Screenshot 3" class="rounded-lg object-cover h-28 w-full">
+            <!-- Image Carousel -->
+            <div class="relative mt-4">
+              <img id="beeImg" 
+                   src="images/bee1.png" 
+                   alt="Screenshot" 
+                   class="rounded-lg object-cover w-full h-64 transition duration-300"
+                   data-images='["images/bee1.png","images/bee2.png","images/bee3.png"]'
+                   data-index="0">
+          
+              <!-- Left Button -->
+              <button onclick="prevImage('beeImg')" 
+                      class="absolute top-1/2 left-2 -translate-y-1/2 bg-slate-700 p-2 rounded-full hover:bg-slate-600">‹</button>
+          
+              <!-- Right Button -->
+              <button onclick="nextImage('beeImg')" 
+                      class="absolute top-1/2 right-2 -translate-y-1/2 bg-slate-700 p-2 rounded-full hover:bg-slate-600">›</button>
             </div>
           
             <!-- Link -->
